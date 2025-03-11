@@ -1,13 +1,15 @@
 import Image from "next/image";
 
-const ItemList = ({ item }) => {
+const ItemList = ({ items }) => {
   return (
     <>
-      <div>
-        <Image src={item.image} alt="..." />
-        <div>{item.name}</div>
-        <div>{item.plaintext}</div>
-      </div>
+      {items.map((item) => {
+        <div key={item.id}>
+          <Image src={item.image} alt="..." />
+          <div>{item.name}</div>
+          <div>{item.plaintext}</div>
+        </div>;
+      })}
     </>
   );
 };

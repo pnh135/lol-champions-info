@@ -1,10 +1,19 @@
 import ItemList from "@/components/ItemList";
+import { ITems } from "@/types/Items";
 
-const ItemPage = () => {
+const ItemPage = async () => {
+  const res = await fetch(
+    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/item.json"
+  );
+  const fetchData = await res.json();
+  const item = Object.entries(fetchData.data);
+  console.log(item);
+
+  //  obj.entries 로 배열로 변환하여 객체> 배열
   return (
     <>
       <div>아이템 페이지</div>
-      <ItemList item={item} />
+      <ItemList items={item} />
     </>
   );
 };

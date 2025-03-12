@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ItemList = ({ item }: { item: Item }) => {
   return (
-    <div className="bg-slate-200 border">
+    <div className="bg-slate-200 border-r-4">
       <Image
         src={`${IMAGE_URL}${item.image.full}`}
         alt={item.name}

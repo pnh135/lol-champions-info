@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <nav>
+        <nav className="flex justify-between text-2xl bg-slate-700 text-white">
           <Link href={"/"}>홈</Link>
           <Link href={"/champions"}>챔피언 목록</Link>
           <Link href={"/items"}>아이템 목록</Link>

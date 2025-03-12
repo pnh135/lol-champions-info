@@ -1,5 +1,4 @@
 import ItemList from "@/components/ItemList";
-import { ITems } from "@/types/Items";
 
 const ItemPage = async () => {
   const res = await fetch(
@@ -7,9 +6,9 @@ const ItemPage = async () => {
   );
   const fetchData = await res.json();
   const item = Object.entries(fetchData.data);
-  console.log(item);
 
   //  obj.entries 로 배열로 변환하여 객체> 배열
+
   return (
     <>
       <div>아이템 페이지</div>

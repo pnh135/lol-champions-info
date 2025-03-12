@@ -4,7 +4,7 @@ const ItemList = ({ items }) => {
   return (
     <>
       {items.map((item) => {
-        <div key={item.id}>
+        <div key={item[0]}>
           <Image src={item.image} alt="..." />
           <div>{item.name}</div>
           <div>{item.plaintext}</div>

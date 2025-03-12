@@ -1,40 +1,24 @@
-"use client";
-
 import ItemList from "@/components/ItemList";
 import { Item } from "@/types/Items";
-import { useEffect, useState } from "react";
 
-const ItemPage = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/item.json"
-      );
-      const fetchData = await res.json();
-      // const fetchItem = fetchData.map((id)=> {
-      //   id: fetchData.data[0],
-      //   name: fetchData.data.name,
-      //   plaintext: fetchData.data.plaintext,
-      //   image: fetchData.data.image,
-      // })
-      const items = Object.entries(fetchData.data);
-      //   console.log(items);
-
-      for (const [key, value] of items) {
-        console.log(key, value);
-      }
-    };
-    fetchData();
-    setItems(items);
-  }, []);
-
-  //  obj.entries 로 배열로 변환하여 객체> 배열
+const ItemPage = async () => {
+  const res = await fetch(
+    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/item.json",
+    {
+      cache: "force-cache",
+    }
+  );
+  const fetchData = await res.json();
+  const items: Item[] = Object.values(fetchData.data);
 
   return (
     <>
-      <div>아이템 페이지</div>
-      <ItemList items={items} />
+      <div className="bg-slate-300 mb-4">아이템 페이지</div>
+      <div className="grid grid-cols-2 md:cols-4 lg:cols-6 gap-4">
+        {items.map((item) => (
+          <ItemList item={item} key={item.name} />
+        ))}
+      </div>
     </>
   );
 };

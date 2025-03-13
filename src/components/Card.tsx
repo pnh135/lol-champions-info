@@ -12,6 +12,7 @@ const Card = ({ champion }: { champion: Champions }) => {
           alt={champion.name}
           width={100}
           height={100}
+          priority
         />
         <div>{champion.name}</div>
         <div>{champion.title}</div>

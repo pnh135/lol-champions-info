@@ -10,6 +10,7 @@ export interface Champions {
   id: string;
   key: number;
   name: string;
+  title: string;
   blurb: string;
   info: {
     attack: number;
@@ -17,6 +18,7 @@ export interface Champions {
     magic: number;
     difficulty: number;
   };
+  image: ChampionsImage;
   tags: string[];
   partype: string;
   stats: {

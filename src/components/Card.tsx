@@ -1,4 +1,4 @@
-import { CHAMP_URL } from "@/constants/api";
+import { CHAMP_IMAGE_URL } from "@/constants/api";
 import { Champions } from "@/types/Champions";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ const Card = ({ champion }: { champion: Champions }) => {
     <div className="bg-slate-200 border border-solid border-red-200 rounded-lg cursor-pointer">
       <Link href={`/champions/${champion.id}`}>
         <Image
-          src={`${CHAMP_URL}${champion.image.full}`}
+          src={`${CHAMP_IMAGE_URL}${champion.image.full}`}
           alt={champion.name}
           width={100}
           height={100}

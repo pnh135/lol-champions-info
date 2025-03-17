@@ -12,6 +12,7 @@ const ItemList = ({ item }: { item: Item }) => {
           alt={item.name}
           width={100}
           height={100}
+          priority
         />
         <div>{item.name}</div>
         <div>{item.plaintext}</div>

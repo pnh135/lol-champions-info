@@ -44,3 +44,46 @@ export interface Champions {
     attackspeed: number;
   };
 }
+
+export interface Champion {
+  id: string;
+  key: string;
+  name: string;
+  title: string;
+  image: ChampionsImage;
+  skins: string;
+  lore: string;
+  blurb: string;
+  allytips: string[];
+  enemytips: string[];
+  tags: string[];
+  partype: string;
+  info: {
+    attack: number;
+    defense: number;
+    magic: number;
+    difficulty: number;
+  };
+  stats: {
+    hp: number;
+    hpperlevel: number;
+    mp: number;
+    mpperlevel: number;
+    movespeed: number;
+    armor: number;
+    armorperlevel: number;
+    spellblock: number;
+    spellblockperlevel: number;
+    attackrange: number;
+    hpregen: number;
+    hpregenperlevel: number;
+    mpregen: number;
+    mpregenperlevel: number;
+    crit: number;
+    critperlevel: number;
+    attackdamage: number;
+    attackdamageperlevel: number;
+    attackspeedperlevel: number;
+    attackspeed: number;
+  };
+}

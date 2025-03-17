@@ -16,11 +16,13 @@ const ChampionDetailPage = async ({
   console.log(champion);
 
   return (
-    <>
+    <div className="w-full bg-slate-100">
       <div>챔피온 개별 페이지</div>
       <div>아이디 값: {params.id}</div>
       <div>챔피언 이름: {champion.name}</div>
-    </>
+      <div>챔피언 타이틀: {champion.title}</div>
+      <div>{champion.blurb}</div>
+    </div>
   );
 };
 

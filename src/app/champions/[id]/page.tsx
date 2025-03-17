@@ -13,9 +13,6 @@ const ChampionDetailPage = async ({
   const res = await fetch(`${CHAMP_ONE_URL}${paramsId}.json`);
   const fetchData = await res.json();
   const champion: Champion[] = Object.values(fetchData.data);
-  const spells = Object.keys(fetchData.data);
-
-  console.log(spells);
 
   return (
     <div className="w-full bg-slate-100 flex flex-col justify-center text-center p-2">

@@ -1,12 +1,11 @@
 import Card from "@/components/Card";
+import { CHAMPIONS_URL } from "@/constants/api";
 import { Champions } from "@/types/Champions";
 
 export const revalidate = 86400;
 
 const ChampionPage = async () => {
-  const res = await fetch(
-    "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion.json"
-  );
+  const res = await fetch(`${CHAMPIONS_URL}`);
   const fetchData = await res.json();
   const champions: Champions[] = Object.values(fetchData.data);
 

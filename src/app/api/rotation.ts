@@ -1,7 +1,7 @@
-const getRotation = async () => {
-  const res = await fetch(
-    `https://kr.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${process.env.RIOT_API_KEY}`
-  );
-  const data = res.json();
+import { ROTATION_URL } from "@/constants/api";
+
+const getRotationData = async () => {
+  const res = await fetch(`${ROTATION_URL}${process.env.RIOT_API_KEY}`);
+  const data = await res.json();
   return data;
 };

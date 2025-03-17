@@ -9,3 +9,6 @@ export const CHAMP_ONE_URL =
 
 export const SPELL_IMAGE_URL =
   "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/spell/";
+
+export const LOADING_IMAGE_URL =
+  "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/";

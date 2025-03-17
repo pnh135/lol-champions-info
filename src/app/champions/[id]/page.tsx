@@ -1,4 +1,4 @@
-import { CHAMP_ONE_URL, LOADING_IMAGE_URL } from "@/constants/api";
+import { CHAMP_ONE_URL, LARGE_IMAGE_URL } from "@/constants/api";
 import { Champion } from "@/types/Champions";
 import Image from "next/image";
 
@@ -13,8 +13,9 @@ const ChampionDetailPage = async ({
   const res = await fetch(`${CHAMP_ONE_URL}${paramsId}.json`);
   const fetchData = await res.json();
   const champion: Champion[] = Object.values(fetchData.data);
+  const spells = Object.keys(fetchData.data);
 
-  console.log(champion);
+  console.log(spells);
 
   return (
     <div className="w-full bg-slate-100 flex flex-col justify-center text-center p-2">
@@ -23,7 +24,7 @@ const ChampionDetailPage = async ({
       {champion.map((champ) => (
         <>
           <Image
-            src={`${LOADING_IMAGE_URL}${champ.id}_0.jpg`}
+            src={`${LARGE_IMAGE_URL}${champ.id}_0.jpg`}
             alt={champ.name}
             width={600}
             height={600}

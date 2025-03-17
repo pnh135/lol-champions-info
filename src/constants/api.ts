@@ -3,3 +3,6 @@ export const ITEM_IMAGE_URL =
 
 export const CHAMP_IMAGE_URL =
   "https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/";
+
+export const CHAMP_ONE_URL =
+  "https://ddragon.leagueoflegends.com/cdn/15.5.1/data/ko_KR/champion/";

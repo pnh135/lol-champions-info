@@ -32,7 +32,7 @@ const ChampionDetailPage = async ({
           />
           <div>챔피언 이름: {champ.name}</div>
           <div>챔피언 타이틀: {champ.title}</div>
-          <div>{champ.blurb}</div>
+          <div>{champ.lore}</div>
           <div className="text-red-500" key={champ.spells.id}>
             {champ.spells.name}
           </div>

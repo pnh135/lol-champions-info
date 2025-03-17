@@ -86,4 +86,21 @@ export interface Champion {
     attackspeedperlevel: number;
     attackspeed: number;
   };
+  spells: spells;
+}
+
+export interface spells {
+  id: string;
+  name: string;
+  description: string;
+  tooltip: string;
+  leveltip: {
+    label: string[];
+    effect: string[];
+  };
+  maxrank: number;
+  cooldown: number[];
+  colldownBurn: string;
+  cost: number[];
+  costBurn: string;
 }

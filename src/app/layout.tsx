@@ -29,7 +29,9 @@ export default function RootLayout({
           <main>{children}</main>
           <ReactQueryDevtools initialIsOpen={false} />
         </Provider>
-        <footer>League of Legend</footer>
+        <footer className="absolute bottom-0 bg-slate-700 w-full text-center">
+          <p className="text-slate-400">League of Legend</p>
+        </footer>
       </body>
     </html>
   );

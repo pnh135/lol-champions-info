@@ -17,4 +17,4 @@ export const LARGE_IMAGE_URL =
   "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
 
 export const ROTATION_URL =
-  "https://kr.api.riotgames.com/lol/platform/v3/champion-rotations";
+  "https://kr.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=";

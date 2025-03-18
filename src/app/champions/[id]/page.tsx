@@ -15,8 +15,7 @@ const ChampionDetailPage = async ({
   const champion: Champion[] = Object.values(fetchData.data);
 
   return (
-    <div className="w-full bg-slate-100 flex flex-col justify-center text-center p-2">
-      <div>챔피온 개별 페이지</div>
+    <div className="w-full bg-slate-100 flex flex- justify-center text-center p-4">
       {/* <div>아이디 값: {params.id}</div> */}
       {champion.map((champ) => (
         <>
@@ -27,11 +26,15 @@ const ChampionDetailPage = async ({
             height={600}
             priority
           />
-          <div>챔피언 이름: {champ.name}</div>
-          <div>챔피언 타이틀: {champ.title}</div>
-          <div>{champ.lore}</div>
-          <div className="text-red-500" key={champ.spells.id}>
-            {champ.spells.name}
+          <div>
+            <div className="text-2xl font-semibold m-4 w-full">
+              {champ.name}
+            </div>
+            <div className="text-lg font-medium m-4 w-full">{champ.title}</div>
+            <div className="text-lg font-medium m-4">{champ.lore}</div>
+            <div className="text-red-500" key={champ.spells.id}>
+              {champ.spells.name}
+            </div>
           </div>
         </>
       ))}

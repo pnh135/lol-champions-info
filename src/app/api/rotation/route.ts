@@ -1,9 +1,9 @@
 import { ROTATION_URL } from "@/constants/api";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-static";
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   const res = await fetch(`${ROTATION_URL}`, {
     headers: {
       "User-Agent":

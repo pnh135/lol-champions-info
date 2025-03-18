@@ -10,14 +10,14 @@ const ChampionPage = async () => {
   const champions: Champions[] = Object.values(fetchData.data);
 
   return (
-    <>
-      <div>챔피온 페이지</div>
-      <div className="grid grid-cols-2 md:cols-4 lg:cols-6 gap-4">
+    <div className="text-center">
+      <div className="mb-4 text-white text-2xl mt-3">챔피온 페이지</div>
+      <div className="grid grid-cols-6 gap-4 justify-center text-center">
         {champions.map((champion) => (
           <Card champion={champion} key={champion.id} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

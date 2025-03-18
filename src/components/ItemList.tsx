@@ -5,9 +5,10 @@ import Link from "next/link";
 
 const ItemList = ({ item }: { item: Item }) => {
   return (
-    <div className="bg-slate-200 border border-solid border-red-200 rounded-lg">
+    <div className="bg-slate-200 border border-solid rounded-lg p-4">
       <Link href={`/items/${item.name}`}>
         <Image
+          className="grid items-center"
           src={`${ITEM_IMAGE_URL}${item.image.full}`}
           alt={item.name}
           width={100}

@@ -12,14 +12,14 @@ const ItemPage = async () => {
   const items: Item[] = Object.values(fetchData.data);
 
   return (
-    <>
-      <div className="bg-slate-300 mb-4">아이템 페이지</div>
-      <div className="grid grid-cols-2 md:cols-4 lg:cols-6 gap-4">
+    <div className="text-center">
+      <div className="mb-4 text-white text-2xl mt-3">아이템 페이지</div>
+      <div className="grid grid-cols-6 gap-4 justify-center text-center">
         {items.map((item) => (
           <ItemList item={item} key={item.name} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

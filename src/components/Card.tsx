@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Card = ({ champion }: { champion: Champions }) => {
   return (
-    <div className="bg-slate-200 border border-solid border-red-200 rounded-lg cursor-pointer">
+    <div className="bg-slate-200 border border-solid rounded-lg p-4 cursor-pointer">
       <Link href={`/champions/${champion.id}`}>
         <Image
           src={`${CHAMP_IMAGE_URL}${champion.image.full}`}

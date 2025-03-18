@@ -2,6 +2,8 @@ import { ROTATION_URL } from "@/constants/api";
 import { rotations } from "@/types/Rotation";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-static";
+
 export async function GET() {
   const res = await fetch(`${ROTATION_URL}`, {
     method: "GET",

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Provider from "@/provider";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export const metadata: Metadata = {
   title: "Documents",
@@ -23,7 +25,10 @@ export default function RootLayout({
             <Link href={"/rotation"}>챔피언 로테이션</Link>
           </nav>
         </header>
-        <main>{children}</main>
+        <Provider>
+          <main>{children}</main>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </Provider>
         <footer>League of Legend</footer>
       </body>
     </html>

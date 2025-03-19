@@ -32,9 +32,6 @@ const ChampionDetailPage = async ({
             </div>
             <div className="text-lg font-medium m-4 w-full">{champ.title}</div>
             <div className="text-lg font-medium m-4">{champ.lore}</div>
-            <div className="text-red-500" key={champ.spells.id}>
-              {champ.spells.name}
-            </div>
           </div>
         </>
       ))}

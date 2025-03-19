@@ -2,11 +2,11 @@
 
 <br/>
 
-![메인 이미지](https://i.imgur.com/tPAdVWJ.png)
+![메인 이미지](https://i.imgur.com/Hi2b20E.jpeg)
 
 **▼▼ vercel 배포 링크 ▼▼**
 
-[배포 페이지](https://my-mbti-test-two.vercel.app/)
+[배포 페이지](https://lol-champions-info.vercel.app/)
 
   <br/>
 
@@ -38,9 +38,9 @@
 
 <br/>
 
-- tanstack query의 사용 부재로 **삭제 또는 비공개로 전환** 시 바로 반영되지 않는다..
-- **user의 유지**가 불안정해 본인의 테스트 결과여도 **삭제 또는 비공개 버튼**이 뜨지 않을 경우가 있다.
-- **json-server의 배포 문제**로 **테스트 결과 페이지**가 제대로 렌더링되지 않는다.
+- **메인 페이지**를 정리해두지 않았다.
+- **Rotation**정보를 불러오는 과정에서 오류가 생겨 현 build 파일에서 전부 비공개되어 있다.
+- 아이템 내 **상세 정보** 페이지가 존재는 하지만 내용을 작성해두지 않았다.
 
 <br/>
 

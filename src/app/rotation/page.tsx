@@ -45,7 +45,7 @@ const RotationPage = () => {
   // };
 
   return (
-    <>
+    <div className="w-full text-center">
       <div className="mb-4 text-white text-2xl mt-3">금주의 챔피언 페이지</div>
       <div className="grid grid-cols-6 gap-4 justify-center text-center">
         {/* 챔피언 렌더링 */}
@@ -53,7 +53,7 @@ const RotationPage = () => {
           <Card champion={champion} key={champion.id} />
         ))} */}
       </div>
-    </>
+    </div>
   );
 };
 

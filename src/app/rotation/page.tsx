@@ -31,12 +31,13 @@ const RotationPage = () => {
   const Championdata = async () => {
     const res = await fetch(`${CHAMPIONS_URL}`);
     const fetchData = await res.json();
-    const champions: Champions = Object.values(fetchData.data);
-    return champions;
+    const champions: Champions[] = Object.values(fetchData.data);
+
+    const filterChampion = champions.filter((champion) =>
+      rotationData.freeChampionIds.includes(champion.key)
+    );
+    return filterChampion;
   };
-  const filterChampion = Championdata.filter((champion) =>
-    rotationData.freeChampionIds.includes(parseInt(champion.key))
-  );
 
   return (
     <>
